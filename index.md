@@ -1,4 +1,5 @@
 # OEXRWrapper
+https://rubygems.org/gems/oexrwrapper
 
 Simple gem written for learning purposes. Fetches latest exchange rate from OpenExchangeRates.org and returns value.  
 
