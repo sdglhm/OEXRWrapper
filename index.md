@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# OEXRWrapper
 
-You can use the [editor on GitHub](https://github.com/sdglhm/OEXRWrapper/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Simple gem written for learning purposes. Fetches latest exchange rate from OpenExchangeRates.org and returns value.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## ToDo
+- [X] Get latest currency exchange rate
+- [ ] Implement currencies list
+- [ ] Write tests (Probably)
 
-### Markdown
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Add this line to your application's Gemfile:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```ruby
+gem 'oexrwrapper'
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+And then execute:
 
-### Jekyll Themes
+    $ bundle install
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sdglhm/OEXRWrapper/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Or install it yourself as:
 
-### Support or Contact
+    $ gem install oexrwrapper
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Usage
+
+```ruby
+client = OEXRWrapper::Client.new(app_id: key, base_rate_code: 'usd')
+
+# Get all latest exchange rates
+client.latest.retrieve
+
+# Get a single currency exchange rate from code
+client.latest.usd
+client.latest.jpy
+```
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oexrwrapper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/oexrwrapper/blob/master/CODE_OF_CONDUCT.md).
+
+## Code of Conduct
+
+Everyone interacting in the Oexrwrapper project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/oexrwrapper/blob/master/CODE_OF_CONDUCT.md).
