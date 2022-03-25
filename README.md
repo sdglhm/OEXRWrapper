@@ -1,4 +1,5 @@
 # OEXRWrapper
+[![Maintainability](https://api.codeclimate.com/v1/badges/a71a2a3a3e3ce266b7c0/maintainability)](https://codeclimate.com/github/sdglhm/OEXRWrapper/maintainability)  
 
 Simple gem written for learning purposes. Fetches latest exchange rate from OpenExchangeRates.org and returns value.  
 
