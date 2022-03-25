@@ -13,7 +13,7 @@ module OEXRWrapper
     private
 
     def raise_response(response)
-      case response
+      case response.status
       when 404
         raise Error, "Not found error."
       when 401
