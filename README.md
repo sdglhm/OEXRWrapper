@@ -4,7 +4,7 @@ Simple gem written for learning purposes. Fetches latest exchange rate from Open
 
 ## ToDo
 - [X] Get latest currency exchange rate
-- [ ] Implement currencies list
+- [X] Implement currencies list
 - [ ] Write tests (Probably)
 
 ## Installation
@@ -34,6 +34,13 @@ client.latest.retrieve
 # Get a single currency exchange rate from code
 client.latest.usd
 client.latest.jpy
+
+# Get list of supported currencies
+client.currencies.retrieve
+
+# Convert a three letter currency code to currency name
+client.currencies.code_to_string('usd')
+client.currencies.code_to_s('usd')
 ```
 ## Development
 
@@ -43,7 +50,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oexrwrapper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/oexrwrapper/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/sdglhm/OEXRWrapper. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/sdglhm/OEXRWrapper/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 

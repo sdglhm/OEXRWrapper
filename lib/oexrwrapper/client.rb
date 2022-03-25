@@ -13,7 +13,11 @@ module OEXRWrapper
     end
 
     def latest
-      LatestResource.new(self)
+      LatestResource.new self
+    end
+
+    def currencies
+      CurrenciesResources.new self
     end
 
     def connection
