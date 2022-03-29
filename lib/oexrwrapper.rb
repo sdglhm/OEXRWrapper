@@ -16,4 +16,5 @@ module OEXRWrapper
   #  Classes
   autoload :Latest, "oexrwrapper/objects/latest"
   autoload :Currencies, "oexrwrapper/objects/currencies"
+  autoload :Currency, "oexrwrapper/objects/currency"
 end

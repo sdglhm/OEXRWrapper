@@ -1,4 +1,4 @@
 module OEXRWrapper
-  class Currencies < Object
+  class Currencies < SimpleDelegator
   end
 end
